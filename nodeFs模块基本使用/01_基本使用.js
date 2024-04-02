@@ -36,3 +36,15 @@ function getFile() {
 
 	aaa();
 }
+// getFile()
+// 文件描述符
+function getFile2() {
+	const fd = fs.open("./aaa.txt", (err, fd) => {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log(fd);
+		}
+	});
+}
+getFile2();
